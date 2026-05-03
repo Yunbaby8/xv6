@@ -15,3 +15,5 @@ Git 本地仓库初始化实验
 
 **内核模块加载与卸载实验** 编写最小可加载内核模块（`hello_module.ko`），通过 `insmod`/`rmmod` 实现内核功能的动态加载与卸载，并利用 `dmesg` 验证模块初始化与退出函数的执行过程。
 procfs 可读写接口实验 在 /proc/hello_module 中新增 write 回调，实现通过 echo 修改内核变量并用 cat 验证结果。
+
+**字符设备驱动实验** 实现了一个最小的字符设备驱动 `/dev/mydev`，支持 `open`、`write` 和 `read` 操作，并通过 `mknod` 手动创建设备节点，使用 `echo` 和 `cat` 验证数据的写入和读取。
